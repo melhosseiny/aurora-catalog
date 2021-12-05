@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Exploring reactivity and web components</title>
+    <title>Aurora web component catalog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
-    <link rel="stylesheet" href="http://localhost:5000/melhosseiny/aurora/main/src/typography/type.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost:5000/melhosseiny/aurora/main/src/button/button.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/rhythm.css">
-    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/typography/type.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/rhythm.css">
+    <link rel="stylesheet" href="https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/button/button.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/table/table.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
-    <!--script type="importmap">
-    {
-      "imports": {
-        "@melhosseiny/sourdough": "/@melhosseiny/sourdough/src/index.mjs",
-        "@melhosseiny/aurora": "/@melhosseiny/aurora/src/index.mjs"
-      }
-    }
-  </script-->
     <script type="module">
-      import { set_shared_style_sheets } from "http://localhost:5000/melhosseiny/sourdough/main/sourdough.js";
-      console.log(document.styleSheets);
-      set_shared_style_sheets([document.styleSheets[0], document.styleSheets[1], document.styleSheets[2], document.styleSheets[3]]);
+      import { set_shared_style_sheets } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+      const document_style_sheets = [...document.styleSheets].slice(0,5);
+      console.log(document_style_sheets);
+      set_shared_style_sheets(document_style_sheets);
     </script>
     <style>
       .grid {
@@ -62,14 +56,14 @@
     <a class="button">Button</a>
     <input disabled type="button" value="Button">
     <h1>Card</h1>
-    <v-dialog id="dialog"></v-dialog>
-    <v-toast id="toast"></v-toast>
+    <ad-dialog id="dialog"></ad-dialog>
+    <ad-toast id="toast"></ad-toast>
     <pythagorean-solver a="2" b="3"></pythagorean-solver>
     <pythagorean-solver a="10" b="5"></pythagorean-solver>
     <button onclick="showToast()">Show toast</button>
     <button onclick="showDialog()">Show dialog</button>
     <div class="grid">
-      <v-card title="Aurora" subtitle="Borealis">
+      <ad-card title="Aurora" subtitle="Borealis">
         <picture slot="media">
           <source srcset="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" type="image/webp">
           <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" width="800" height="531" alt="alt text">
@@ -85,134 +79,134 @@
           <button class="text">Like</button>
           <button disabled class="text">Bookmark</button>
         </div>
-      </v-card>
-      <v-card title="Title" subtitle="Subtitle">
+      </ad-card>
+      <ad-card title="Title" subtitle="Subtitle">
         <picture slot="media">
           <source srcset="https://upload.wikimedia.org/wikipedia/commons/0/07/Aurore_australe_-_Aurora_australis.jpg" type="image/jpeg">
           <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Aurore_australe_-_Aurora_australis.jpg" width="800" height="533" alt="alt text">
         </picture>
-      </v-card>
-      <v-card title="Title" subtitle="Subtitle">
+      </ad-card>
+      <ad-card title="Title" subtitle="Subtitle">
         <picture slot="media">
           <source srcset="https://upload.wikimedia.org/wikipedia/commons/1/1d/Red_and_green_aurora.jpg" type="image/webp">
           <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Red_and_green_aurora.jpg" width="1526" height="1029" alt="alt text">
         </picture>
-      </v-card>
+      </ad-card>
     </div>
     <h1>Carousel</h1>
     <div style="max-width: 38em;">
-      <v-carousel snap-align="center">
-        <v-card title="Title" subtitle="Subtitle">
+      <ad-carousel snap-align="center">
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-      </v-carousel>
-      <v-carousel number-of-items="1">
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+      </ad-carousel>
+      <ad-carousel number-of-items="1">
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card>
-        <!--v-card title="Title" subtitle="Subtitle">
+        </ad-card>
+        <!--ad-card title="Title" subtitle="Subtitle">
           <picture slot="media">
             <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
             <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
           </picture>
-        </v-card-->
-      </v-carousel>
+        </ad-card-->
+      </ad-carousel>
     </div>
     <h1>Hierarchy and Meaning</h1>
     <p>The structure and semantics of a website are communicated through a typographic system. Your reader should be able to pick up this undocumented visual language intuitively. A good system makes documents scannable, operates <abbr>JPL</abbr> for <abbr>NASA</abbr> programs.</p>
@@ -236,11 +230,12 @@
     <p>Broadly speaking there are three kinds of text, each of which can take on a different magnitude, small, medium and large.</p>
     <p><em>Reference</em>. Reference text includes small print, notes and specialist purposes such as <a href="#">bibliographies</a> and data presentation</p>
     <script type="module">
-      import { carousel } from "http://localhost:5000/melhosseiny/aurora/main/src/carousel/carousel.js";
-      import { card } from "http://localhost:5000/melhosseiny/aurora/main/src/card/card.js";
-      import { dialog } from "http://localhost:5000/melhosseiny/aurora/main/src/dialog/dialog.js";
-      import { pythagorean } from "http://localhost:5000/melhosseiny/aurora/main/src/pythagorean/pythagorean.js";
-      import { toast } from "http://localhost:5000/melhosseiny/aurora/main/src/toast/toast.js";
+      import { progress } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/progress/progress.js";
+      import { toast } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/toast/toast.js";
+      import { card } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/card/card.js";
+      import { carousel } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/carousel/carousel.js";
+      import { dialog } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/dialog/dialog.js";
+      import { pythagorean } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/pythagorean/pythagorean.js";
 
       window.showToast = () => {
         document.querySelector('#toast').component.display("Hey there.");
