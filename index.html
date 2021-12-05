@@ -230,6 +230,15 @@
     <p>Broadly speaking there are three kinds of text, each of which can take on a different magnitude, small, medium and large.</p>
     <p><em>Reference</em>. Reference text includes small print, notes and specialist purposes such as <a href="#">bibliographies</a> and data presentation</p>
     <script type="module">
+      import { get_constructed_style_sheet } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+
+      const document_style_sheets = [...document.styleSheets].slice(0,5);
+
+      let document_constructed_sheets;
+      try {
+        document_constructed_sheets = document_style_sheets.map(get_constructed_style_sheet);
+      } catch (error) {}
+
       import { progress } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/progress/progress.js";
       import { toast } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/toast/toast.js";
       import { card } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/card/card.js";
@@ -244,6 +253,14 @@
       window.showDialog = () => {
         console.log(document.querySelector('#dialog').component.show());
       }
+
+      try {
+        ["ad-progress", "ad-toast", "ad-card", "ad-carousel", "ad-dialog" ,"pythagorean-solver"].forEach(element => {
+          if (document.querySelector(element)) {
+            document.querySelector(element).component.adopt_styles(document_constructed_sheets);
+          }
+        });
+      } catch (error) {}
     </script>
   </body>
 </html>
