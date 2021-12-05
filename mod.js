@@ -14,12 +14,12 @@ const static_path = [
 
 serve(async (request) => {
   let { pathname } = new URL(request.url);
-  // pathname = pathname === "/" ? "/index_inline.html" : pathname;
+  pathname = pathname === "/" ? "/index_inline.html" : pathname;
 
   let response_body = static_path.some(prefix => pathname.startsWith(prefix))
     ? await Deno.readFile(`.${pathname}`)
-    : await Deno.readFile('./index.html');
-    // : await Deno.readFile('./index_inline.html');
+    // : await Deno.readFile('./index.html');
+    : await Deno.readFile('./index_inline.html');
 
   const headers = new Headers({
     "content-type": content_type(pathname),
