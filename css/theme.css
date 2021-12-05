@@ -1,0 +1,75 @@
+h2 {
+  margin-bottom: var(--line-height-h2);
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('/fonts/sf-pro-display_semibold.woff2') format('woff2');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('/fonts/sf-pro-display_regular.woff2') format('woff2');
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url('/fonts/sf-pro-text_semibold.woff2') format('woff2');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url('/fonts/sf-pro-text_regular.woff2') format('woff2');
+  font-weight: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url('/fonts/sf-pro-text_light.woff2') format('woff2');
+  font-weight: 200;
+  font-display: fallback;
+}
+
+.md-icon {
+  font-family: 'Material Icons';
+  font-style: normal;
+}
+
+:root {
+  --type-display: "SF Pro Display", serif;
+  --type-body: "SF Pro Text", sans-serif;
+  --type-brand: charlemagne-std, sans-serif;
+  --type-brand-letter-spacing: 0.38em;
+  --background-color: 255, 255, 255;
+  --text-color: 0, 0, 0;
+  --primary-color: 12, 25, 64;
+  --accent-color: 217, 136, 37;
+  --soul-g: 0, 208, 193;
+  --soul-b: 4, 118, 217;
+  --soul:
+    linear-gradient(
+      120deg,
+      rgba(var(--soul-g), 0.25) 61.8%,
+      rgba(var(--soul-b), 0.25)
+    );
+  --soul-hl: rgba(253, 238, 6, 0.25);
+  --soul-shadow:
+    0 -1px 0 rgba(0, 255, 0, 0.25),
+    1px 0 0 rgb(255, 0, 255, 0.25),
+    -1px 0 0 rgb(0, 0, 255, 0.25);
+  --sky:
+    linear-gradient(
+      135deg,
+      rgb(84, 111, 191) 0%,
+      rgb(113, 147, 217) 50%,
+      rgb(224, 182, 242) 100%
+    );
+    --border-radius: 0;
+}
