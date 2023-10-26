@@ -4,6 +4,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--line-height-body);
 }
 
+pre, code {
+  font-family: var(--type-mono);
+  font-size: 14px;
+}
+
 @font-face {
   font-family: "SF Pro Display";
   src: url('https://early-fox-61.deno.dev/sf-pro-display_semibold.woff2') format('woff2');
@@ -39,6 +44,13 @@ h1, h2, h3, h4, h5, h6 {
   font-display: fallback;
 }
 
+@font-face {
+  font-family: "SF Mono";
+  src: url('https://early-fox-61.deno.dev/sf-mono_regular.woff') format('woff');
+  font-weight: normal;
+  font-display: fallback;
+}
+
 .md-icon {
   font-family: 'Material Icons';
   font-style: normal;
@@ -47,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --type-display: "SF Pro Display", serif;
   --type-body: "SF Pro Text", sans-serif;
+  --type-mono: "SF Mono", monospace;
   --type-brand: charlemagne-std, sans-serif;
   --type-brand-letter-spacing: 0.38em;
   --background-color: 255, 255, 255;
@@ -74,4 +87,8 @@ h1, h2, h3, h4, h5, h6 {
       rgb(224, 182, 242) 100%
     );
     --border-radius: 0;
+}
+
+body {
+  background: var(--soul);
 }

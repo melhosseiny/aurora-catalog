@@ -9,13 +9,7 @@
     <link rel="stylesheet" href="https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/button/button.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/table/table.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
-    <script type="module">
-      import { set_shared_style_sheets } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
-      const document_style_sheets = [...document.styleSheets].slice(0,5);
-      console.log(document_style_sheets);
-      set_shared_style_sheets(document_style_sheets);
-    </script>
+    <link rel="stylesheet" href="/css/layout.css">
     <style>
       .grid {
         /*border: 1px solid purple;*/
@@ -45,199 +39,55 @@
         display: block;
       }
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <script type="module">
+      import { set_shared_style_sheets } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+      const document_style_sheets = [...document.styleSheets].slice(0,7);
+      console.log(document_style_sheets);
+      set_shared_style_sheets(document_style_sheets);
+    </script>
   </head>
   <body>
-    <h1>Button</h1>
-    <button>Button</button>
-    <a class="button" href="#">Button</a>
-    <input type="button" value="Button"> and not a button
-    <br>
-    <button disabled>Button</button>
-    <a class="button">Button</a>
-    <input disabled type="button" value="Button">
-    <h1>Card</h1>
-    <ad-dialog id="dialog"></ad-dialog>
-    <ad-toast id="toast"></ad-toast>
-    <pythagorean-solver a="2" b="3"></pythagorean-solver>
-    <pythagorean-solver a="10" b="5"></pythagorean-solver>
-    <button onclick="showToast()">Show toast</button>
-    <button onclick="showDialog()">Show dialog</button>
-    <div class="grid">
-      <ad-card title="Aurora" subtitle="Borealis">
-        <picture slot="media">
-          <source srcset="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" type="image/webp">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" width="800" height="531" alt="alt text">
-        </picture>
-        <picture slot="thumbnail">
-          <source srcset="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" type="image/webp">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" width="800" height="531" alt="alt text">
-        </picture>
-        <p slot="text">
-          A natural electrical phenomenon characterized by the appearance of streamers of reddish or greenish light in the sky, especially near the northern or southern magnetic pole.
-        </p>
-        <div slot="actions">
-          <button class="text">Like</button>
-          <button disabled class="text">Bookmark</button>
-        </div>
-      </ad-card>
-      <ad-card title="Title" subtitle="Subtitle">
-        <picture slot="media">
-          <source srcset="https://upload.wikimedia.org/wikipedia/commons/0/07/Aurore_australe_-_Aurora_australis.jpg" type="image/jpeg">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Aurore_australe_-_Aurora_australis.jpg" width="800" height="533" alt="alt text">
-        </picture>
-      </ad-card>
-      <ad-card title="Title" subtitle="Subtitle">
-        <picture slot="media">
-          <source srcset="https://upload.wikimedia.org/wikipedia/commons/1/1d/Red_and_green_aurora.jpg" type="image/webp">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Red_and_green_aurora.jpg" width="1526" height="1029" alt="alt text">
-        </picture>
-      </ad-card>
-    </div>
-    <h1>Carousel</h1>
-    <div style="max-width: 38em;">
-      <ad-carousel snap-align="center">
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-      </ad-carousel>
-      <ad-carousel number-of-items="1">
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/1e9ba9ab/c8d1/4e18/ba06/359089f641a3/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/9f4e486a/4d00/4090/b1bc/84cc0d73e92a/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card>
-        <!--ad-card title="Title" subtitle="Subtitle">
-          <picture slot="media">
-            <source srcset="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" type="image/webp">
-            <img loading="lazy" src="https://resources.tidal.com/images/62bbee85/e3bf/4539/a3b5/2d053883e11c/1280x1280.jpg" alt="alt text">
-          </picture>
-        </ad-card-->
-      </ad-carousel>
-    </div>
-    <h1>Hierarchy and Meaning</h1>
-    <p>The structure and semantics of a website are communicated through a typographic system. Your reader should be able to pick up this undocumented visual language intuitively. A good system makes documents scannable, operates <abbr>JPL</abbr> for <abbr>NASA</abbr> programs.</p>
-    <h2>Establish this structure and semantics up front</h2>
-    <p>First, you'll need to understand the hierarchy and structure for yourself. What are the aspects of the content? How many levels of heading are required? Are there notes and captions Does the text contain tables, reference material or</p>
-    <blockquote>
-      <p>There is nothing simple or dull in achieving the transparent page. Vulgar ostentation is twice as easy as discipline. When you realise that ugly typography never effaces itself; you will be able to capture beauty as the wise men capture happiness by aiming at something else.</p>
-      <footer>— from The Crystal Goblet by <cite>Beatrice Warde</cite>, 1932</footer>
-    </blockquote>
-    <blockquote class="quoted">
-      <p>One more attribute the modern typographer must have: the capacity for taking great pains with seemingly unimportant detail. To him, one typographical point must be as important as one inch, and he must harden his heart against the accusation of being too fussy.</p>
-      <footer>— Hans P. Schmoller, in ‘Book Design Today’, <cite>Printing Review</cite>, Spring 1951</footer>
-    </blockquote>
-    <h3>Don't rely on size alone for differentiation</h3>
-    <p>To denote hierarchy and meaning, the primary <kbd>CTRL</kbd> role of your typographic system is to provide differentiation. Major heading should immediately look different from subheading. Major headings should immediately look different from subheading; emphasized text should stand out from</p>
-    <ol>
-      <li>You can save further space by removing the punctuation from numbering.</li>
-      <li>This is particularly true if you hang the numbering in the margin, providing the optimum expression of continual reading.</li>
-    </ol>
-    <h4>Choose your smallest size first</h4>
-    <p>Broadly speaking there are three kinds of text, each of which can take on a different magnitude, small, medium and large.</p>
-    <p><em>Reference</em>. Reference text includes small print, notes and specialist purposes such as <a href="#">bibliographies</a> and data presentation</p>
+    <ad-progress id="progress"></ad-progress>
+    <header>
+      <hgroup>
+        <h1 class="type--body">
+          <span class="logo"></span>
+          <a class="base" href="/">aurora-design</a>
+          <a href="https://github.com/melhosseiny/aurora" target="_blank" rel="noreferrer">
+            <svg class="symbol" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
+                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+            </svg>
+          </a>
+        </h1>
+      </hgroup>
+      <nav>
+        <a href="/button"><code>ad-button</code></a>
+        <a href="/toast"><code>ad-toast</code></a>
+        <a href="/dialog"><code>ad-dialog</code></a>
+        <a href="/card"><code>ad-card</code></a>
+        <a href="/carousel"><code>ad-carousel</code></a>
+        <a href="/typography"><code>typography</code></a>
+      </nav>
+    </header>
+    <main id="main"></main>
+    <ad-dialog id="global_dialog"></ad-dialog>
+    <ad-toast id="global_toast"></ad-toast>
+    <!--pythagorean-solver a="2" b="3"></pythagorean-solver>
+    <pythagorean-solver a="10" b="5"></pythagorean-solver-->
     <script type="module">
       import { get_constructed_style_sheet } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
 
-      const document_style_sheets = [...document.styleSheets].slice(0,5);
+      const document_style_sheets = [...document.styleSheets].slice(0,7);
+      console.log(document_style_sheets);
 
       let document_constructed_sheets;
       try {
         document_constructed_sheets = document_style_sheets.map(get_constructed_style_sheet);
       } catch (error) {}
+
+      import "/components/app.js";
+      import { doc } from "/components/doc.js";
 
       import { progress } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/progress/progress.js";
       import { toast } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/toast/toast.js";
@@ -247,15 +97,15 @@
       import { pythagorean } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/pythagorean/pythagorean.js";
 
       window.showToast = () => {
-        document.querySelector('#toast').component.display("Hey there.");
+        document.querySelector('#global_toast').component.display("Hey there.");
       }
 
       window.showDialog = () => {
-        console.log(document.querySelector('#dialog').component.show());
+        console.log(document.querySelector('#global_dialog').component.show());
       }
 
       try {
-        const selector = "ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog ,pythagorean-solver";
+        const selector = "ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog ,pythagorean-solver";
         document.querySelectorAll(selector).forEach(element => {
           element.component.adopt_styles(document_constructed_sheets);
         });
