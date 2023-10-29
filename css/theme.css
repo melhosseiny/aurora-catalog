@@ -1,12 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--type-display);
-  font-size: var(--font-size-body);
-  margin-bottom: var(--line-height-body);
-}
-
-pre, code {
-  font-family: var(--type-mono);
-  font-size: 14px;
+@font-face {
+  font-family: 'Premiera';
+  src:  url('https://early-fox-61.deno.dev/premiera-book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -51,17 +48,10 @@ pre, code {
   font-display: fallback;
 }
 
-.md-icon {
-  font-family: 'Material Icons';
-  font-style: normal;
-}
-
 :root {
   --type-display: "SF Pro Display", serif;
   --type-body: "SF Pro Text", sans-serif;
   --type-mono: "SF Mono", monospace;
-  --type-brand: charlemagne-std, sans-serif;
-  --type-brand-letter-spacing: 0.38em;
   --background-color: 255, 255, 255;
   --text-color: 0, 0, 0;
   --primary-color: 12, 25, 64;
@@ -89,6 +79,49 @@ pre, code {
     --border-radius: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--type-display);
+  font-size: var(--font-size-body);
+  margin-bottom: var(--line-height-body);
+}
+
+header h1 a + a, header h1 a + a:link, header h1 a + a:visited {
+  color: rgba(0,0,0,.2);
+  display: flex;
+  align-items: center;
+}
+
+header h1 a + a:hover, header h1 a + a:active {
+  color: rgb(var(--accent-color));
+  display: inline-flex;
+  align-items: center;
+}
+
+pre, code {
+  font-family: var(--type-mono);
+  font-size: 14px;
+}
+
 body {
   background: var(--soul);
+}
+
+/* icons */
+.symbol {
+  width: var(--font-size-body);
+  max-height: var(--font-size-body);
+  padding-top: 2px;
+}
+
+button .symbol, a.button .symbol {
+  margin-right: 4px;
+}
+
+header h1 .symbol {
+  margin-left: 4px;
+}
+
+.md-icon {
+  font-family: 'Material Icons';
+  font-style: normal;
 }
