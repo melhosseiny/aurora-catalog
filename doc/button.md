@@ -1,6 +1,6 @@
 # Button
 
-Normalize `button`, `a.button` and `input[type="button"]` buttons
+Normalize `button`, `a.button` and `input[type="button"]` buttons.
 
 ## How to use
 

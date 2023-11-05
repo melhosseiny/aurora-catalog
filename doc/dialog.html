@@ -1,2 +1,36 @@
 <h1>Dialog</h1>
+<p>A dialog helps people perform a scoped task that's closely related to their current context.</p>
+<h2>How to use</h2>
+<pre><code>&lt;body&gt;
+  &lt;ad-dialog id=&quot;dialog&quot;&gt;&lt;/ad-dialog&gt;
+  ...
+  &lt;script type=&quot;module&quot;&gt;
+    import { dialog } from &quot;https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/dialog/dialog.js&quot;;
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h2>Component methods</h2>
+<table>
+  <thead>
+    <th>name</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>show()</code></td>
+      <td>display a dialog<td>
+    </tr>
+    <tr>
+      <td><code>close()</code></td>
+      <td>hide a dialog<td>
+    </tr>
+  <tbody>
+</table>
+<h2>Demo</h2>
 <p><button onclick="showDialog()">Show dialog</button></p>
+<pre><code>&lt;button onclick=&quot;showDialog()&quot;&gt;Show dialog&lt;/button&gt;
+
+window.showDialog = () =&gt; {
+  console.log(document.querySelector('#global_dialog').component.show());
+}
+</code></pre>
