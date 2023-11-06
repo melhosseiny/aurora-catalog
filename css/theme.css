@@ -107,7 +107,9 @@ pre, code {
 }
 
 body {
-  background: var(--soul);
+  background: url(img/24987.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 /* icons */

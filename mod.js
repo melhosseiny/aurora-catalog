@@ -7,8 +7,7 @@ const static_path = [
   "/components",
   "/css",
   "/doc",
-  "/fonts",
-  "/icons",
+  "/img",
   "/favicon.ico",
   "/robots.txt",
   "/manifest.webmanifest"
