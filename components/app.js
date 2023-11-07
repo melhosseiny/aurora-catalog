@@ -11,11 +11,17 @@ const handleNavigation = function(location) {
   loadPage(page);
 };
 
+const index_tmpl = `<article>
+  <h1 class='tagline'>
+    Aurora design is a web component design system.
+  </h1>
+</article>`
+
 const loadPage = async function(page) {
   switch(page) {
     case "index":
       document.title = "Aurora Design";
-      document.querySelector("#main").innerHTML = "<article>Aurora design is a web component design system.</article>";
+      document.querySelector("#main").innerHTML = index_tmpl;
       break;
     default:
       const doc = await import("/components/doc.js");

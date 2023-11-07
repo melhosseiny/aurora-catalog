@@ -64,18 +64,6 @@
       rgba(var(--soul-g), 0.25) 61.8%,
       rgba(var(--soul-b), 0.25)
     );
-  --soul-hl: rgba(253, 238, 6, 0.25);
-  --soul-shadow:
-    0 -1px 0 rgba(0, 255, 0, 0.25),
-    1px 0 0 rgb(255, 0, 255, 0.25),
-    -1px 0 0 rgb(0, 0, 255, 0.25);
-  --sky:
-    linear-gradient(
-      135deg,
-      rgb(84, 111, 191) 0%,
-      rgb(113, 147, 217) 50%,
-      rgb(224, 182, 242) 100%
-    );
     --border-radius: 0;
 }
 
@@ -87,6 +75,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--type-display);
   font-size: var(--font-size-body);
   margin-bottom: var(--line-height-body);
+}
+
+header h1 .base {
+  font-weight: bold;
+  font-variant-caps: all-small-caps;
+  color: rgb(var(--background-color));
+}
+
+body:has(ac-doc) header h1 .base {
+  color: rgb(var(--text-color));
 }
 
 header h1 a + a, header h1 a + a:link, header h1 a + a:visited {
@@ -107,9 +105,25 @@ pre, code {
 }
 
 body {
-  background: url(img/24987.jpg);
+  background: url(img/24987.jpg), #e0cdac;
   background-size: 100%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body:has(ac-doc) {
+  background: var(--soul);
+}
+
+.tagline {
+  font-size: xx-large;
+  hyphens: auto;
+}
+
+@media (min-width: 60em) {
+  .tagline {
+    font-size: xxx-large;
+  }
 }
 
 /* icons */

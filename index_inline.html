@@ -11,7 +11,7 @@
 </style>
     <style>table{border-collapse:collapse;font-feature-settings:"lnum" 1,"tnum" 1}@supports (font-variant-numeric: tabular-nums){table{font-feature-settings:normal;font-variant-numeric:lining-nums tabular-nums}}caption{caption-side:bottom}td,th{padding:.125em .5em .25em;line-height:1;text-align:left}td.num,th.num{text-align:right}th.oblique{transform-origin:bottom left;position:absolute}@media (max-width: 60em){table,tbody,tfoot,tr,th,td{display:block;text-align:left}caption{display:block}thead,th:empty,td:empty{display:none;visibility:hidden}th.num,td.num{text-align:left}th[data-title]:before,td[data-title]:before{content:attr(data-title) ": ";display:inline-block}tr+tr,tbody+tbody,tfoot{margin-top:1em}}
 </style>
-    <style>@font-face{font-family:"Premiera";src:url(https://early-fox-61.deno.dev/premiera-book.woff2) format("woff2");font-weight:normal;font-style:normal;font-display:fallback}@font-face{font-family:"SF Pro Display";src:url(https://early-fox-61.deno.dev/sf-pro-display_semibold.woff2) format("woff2");font-weight:bold;font-display:fallback}@font-face{font-family:"SF Pro Display";src:url(https://early-fox-61.deno.dev/sf-pro-display_regular.woff2) format("woff2");font-weight:normal;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_semibold.woff2) format("woff2");font-weight:bold;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_regular.woff2) format("woff2");font-weight:normal;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_light.woff2) format("woff2");font-weight:200;font-display:fallback}@font-face{font-family:"SF Mono";src:url(https://early-fox-61.deno.dev/sf-mono_regular.woff) format("woff");font-weight:normal;font-display:fallback}:root{--type-display: "SF Pro Display", serif;--type-body: "SF Pro Text", sans-serif;--type-mono: "SF Mono", monospace;--background-color: 255, 255, 255;--text-color: 0, 0, 0;--primary-color: 12, 25, 64;--accent-color: 217, 136, 37;--soul-g: 0, 208, 193;--soul-b: 4, 118, 217;--soul: linear-gradient( 120deg, rgba(var(--soul-g), .25) 61.8%, rgba(var(--soul-b), .25) );--soul-hl: rgba(253, 238, 6, .25);--soul-shadow: 0 -1px 0 rgba(0, 255, 0, .25), 1px 0 0 rgb(255, 0, 255, .25), -1px 0 0 rgb(0, 0, 255, .25);--sky: linear-gradient( 135deg, rgb(84, 111, 191) 0%, rgb(113, 147, 217) 50%, rgb(224, 182, 242) 100% );--border-radius: 0}a:visited{color:rgb(var(--text-color))}h1,h2,h3,h4,h5,h6{font-family:var(--type-display);font-size:var(--font-size-body);margin-bottom:var(--line-height-body)}header h1 a+a,header h1 a+a:link,header h1 a+a:visited{color:#0003;display:flex;align-items:center}header h1 a+a:hover,header h1 a+a:active{color:rgb(var(--accent-color));display:inline-flex;align-items:center}pre,code{font-family:var(--type-mono);font-size:14px}body{background:url(img/24987.jpg);background-size:100%;background-attachment:fixed}.symbol{width:var(--font-size-body);max-height:var(--font-size-body);padding-top:2px}button .symbol,a.button .symbol{margin-right:4px}header h1 .symbol{margin-left:4px}.md-icon{font-family:"Material Icons";font-style:normal}
+    <style>@font-face{font-family:"Premiera";src:url(https://early-fox-61.deno.dev/premiera-book.woff2) format("woff2");font-weight:normal;font-style:normal;font-display:fallback}@font-face{font-family:"SF Pro Display";src:url(https://early-fox-61.deno.dev/sf-pro-display_semibold.woff2) format("woff2");font-weight:bold;font-display:fallback}@font-face{font-family:"SF Pro Display";src:url(https://early-fox-61.deno.dev/sf-pro-display_regular.woff2) format("woff2");font-weight:normal;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_semibold.woff2) format("woff2");font-weight:bold;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_regular.woff2) format("woff2");font-weight:normal;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_light.woff2) format("woff2");font-weight:200;font-display:fallback}@font-face{font-family:"SF Mono";src:url(https://early-fox-61.deno.dev/sf-mono_regular.woff) format("woff");font-weight:normal;font-display:fallback}:root{--type-display: "SF Pro Display", serif;--type-body: "SF Pro Text", sans-serif;--type-mono: "SF Mono", monospace;--background-color: 255, 255, 255;--text-color: 0, 0, 0;--primary-color: 12, 25, 64;--accent-color: 217, 136, 37;--soul-g: 0, 208, 193;--soul-b: 4, 118, 217;--soul: linear-gradient( 120deg, rgba(var(--soul-g), .25) 61.8%, rgba(var(--soul-b), .25) );--border-radius: 0}a:visited{color:rgb(var(--text-color))}h1,h2,h3,h4,h5,h6{font-family:var(--type-display);font-size:var(--font-size-body);margin-bottom:var(--line-height-body)}header h1 .base{font-weight:bold;font-variant-caps:all-small-caps;color:rgb(var(--background-color))}body:has(ac-doc) header h1 .base{color:rgb(var(--text-color))}header h1 a+a,header h1 a+a:link,header h1 a+a:visited{color:#0003;display:flex;align-items:center}header h1 a+a:hover,header h1 a+a:active{color:rgb(var(--accent-color));display:inline-flex;align-items:center}pre,code{font-family:var(--type-mono);font-size:14px}body{background:url(img/24987.jpg),#e0cdac;background-size:100%;background-attachment:fixed;background-repeat:no-repeat}body:has(ac-doc){background:var(--soul)}.tagline{font-size:xx-large;hyphens:auto}@media (min-width: 60em){.tagline{font-size:xxx-large}}.symbol{width:var(--font-size-body);max-height:var(--font-size-body);padding-top:2px}button .symbol,a.button .symbol{margin-right:4px}header h1 .symbol{margin-left:4px}.md-icon{font-family:"Material Icons";font-style:normal}
 </style>
     <style>body{display:flex;flex-direction:column;align-items:stretch;min-height:100vh;flex-wrap:wrap}header{display:flex;flex-direction:column;flex:0 0 auto;padding:1em;box-sizing:border-box}header hgroup h1{display:flex;flex-direction:row;align-items:center;margin-bottom:var(--line-height-body)}header p{max-width:24em}header nav{display:flex;flex-direction:column;align-items:flex-start}main{display:flex;flex-direction:column;flex-grow:1;flex-basis:auto;padding:1em;padding-top:calc(1em + 2 * var(--line-height-body));box-sizing:border-box}main section{padding:1em}@media screen and (min-width: 60em){body{flex-direction:row}header{flex-basis:38.2%}main{width:100%;min-height:calc(100vh - 40px - 2em);flex-basis:61.8%}}@media screen and (max-width: 60em){main{width:100%;padding-top:1em}}
 </style>
@@ -59,7 +59,7 @@
       <hgroup>
         <h1 class="type--body">
           <span class="logo"></span>
-          <a class="base" href="/">aurora-design</a>
+          <a class="base" href="/">aurora design</a>
           <a href="https://github.com/melhosseiny/aurora" target="_blank" rel="noreferrer">
             <svg class="symbol" fill="currentColor" aria-hidden="true" viewbox="0 0 16 16" version="1.1" data-view-component="true">
                 <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
@@ -67,15 +67,18 @@
           </a>
         </h1>
       </hgroup>
-      <nav>
-        <a href="/button"><code>ad-button</code></a>
-        <a href="/toast"><code>ad-toast</code></a>
-        <a href="/dialog"><code>ad-dialog</code></a>
-        <a href="/card"><code>ad-card</code></a>
-        <a href="/carousel"><code>ad-carousel</code></a>
-        <a href="/typography"><code>typography</code></a>
-        <a href="/rhythm"><code>typography:rhythm</code></a>
-      </nav>
+      <details>
+        <summary>components</summary>
+        <nav>
+          <a href="/button"><code>ad-button</code></a>
+          <a href="/toast"><code>ad-toast</code></a>
+          <a href="/dialog"><code>ad-dialog</code></a>
+          <a href="/card"><code>ad-card</code></a>
+          <a href="/carousel"><code>ad-carousel</code></a>
+          <a href="/typography"><code>typography</code></a>
+          <a href="/rhythm"><code>typography:rhythm</code></a>
+        </nav>
+      </details>
     </header>
     <main id="main"></main>
     <ad-dialog id="global_dialog"></ad-dialog>
