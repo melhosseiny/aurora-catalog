@@ -49,7 +49,7 @@
   </head>
   <body>
     <ad-progress id="progress"></ad-progress>
-    <header>
+    <header id="header">
       <hgroup>
         <h1 class="type--body">
           <span class="logo"></span>
@@ -69,6 +69,7 @@
           <a href="/dialog"><code>ad-dialog</code></a>
           <a href="/card"><code>ad-card</code></a>
           <a href="/carousel"><code>ad-carousel</code></a>
+          <a href="/media_grid"><code>ad-media-grid</code></a>
           <a href="/typography"><code>typography</code></a>
           <a href="/rhythm"><code>typography:rhythm</code></a>
         </nav>
@@ -77,8 +78,6 @@
     <main id="main"></main>
     <ad-dialog id="global_dialog"></ad-dialog>
     <ad-toast id="global_toast"></ad-toast>
-    <!--pythagorean-solver a="2" b="3"></pythagorean-solver>
-    <pythagorean-solver a="10" b="5"></pythagorean-solver-->
     <script type="module">
       import { get_constructed_style_sheet } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
 
@@ -98,7 +97,7 @@
       import { card } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/card/card.js";
       import { carousel } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/carousel/carousel.js";
       import { dialog } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/dialog/dialog.js";
-      import { pythagorean } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/pythagorean/pythagorean.js";
+      import { media_grid } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/media_grid/media_grid.js";
 
       window.showToast = () => {
         document.querySelector('#global_toast').component.display("Hey there.");
@@ -109,7 +108,7 @@
       }
 
       try {
-        const selector = "ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog ,pythagorean-solver";
+        const selector = "ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog, ad-media-grid";
         document.querySelectorAll(selector).forEach(element => {
           element.component.adopt_styles(document_constructed_sheets);
         });

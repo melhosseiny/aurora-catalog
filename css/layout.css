@@ -6,7 +6,7 @@ body {
   flex-wrap: wrap;
 }
 
-header {
+#header {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
@@ -14,18 +14,18 @@ header {
   box-sizing: border-box;
 }
 
-header hgroup h1 {
+#header hgroup h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: var(--line-height-body);
 }
 
-header p {
+#header p {
   max-width: 24em;
 }
 
-header nav {
+#header nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,7 +49,7 @@ main section {
   body {
     flex-direction: row;
   }
-  header {
+  #header {
     flex-basis: 38.2%;
   }
   main {
