@@ -1,11 +1,12 @@
-import { serve } from "https://deno.land/std@0.117.0/http/server.ts";
-import { content_type } from "media_types";
+import { contentType } from "jsr:@std/media-types";
+import { extname } from "jsr:@std/path";
 
 const PATHNAME_PREFIX = "/melhosseiny/aurora-catalog/main";
 
 const static_path = [
   "/components",
   "/css",
+  "/fonts",
   "/doc",
   "/img",
   "/favicon.ico",
@@ -13,7 +14,7 @@ const static_path = [
   "/manifest.webmanifest"
 ];
 
-serve(async (request) => {
+Deno.serve(async (request) => {
   let { pathname } = new URL(request.url);
   pathname = pathname === "/" ? "/index_inline.html" : pathname;
 
@@ -31,9 +32,9 @@ serve(async (request) => {
       response_status = 500;
     }
   }
-
+  
   const headers = new Headers({
-    "content-type": content_type(pathname),
+    "content-type": contentType(extname(pathname)),
     "access-control-allow-origin": "*",
     "cache-control": "no-cache"
   });

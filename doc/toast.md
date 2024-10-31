@@ -1,6 +1,6 @@
 # Toast
 
-A toast is a short notification that disappears after a few seconds.
+Use a toast notification to give users timely, useful information they can understand at a glance.
 
 ## How to use
 
@@ -38,5 +38,5 @@ A toast is a short notification that disappears after a few seconds.
     <button onclick="showToast()">Show toast</button>
 
     window.showToast = () => {
-      document.querySelector('#global_toast').component.display("Hey there.");
+      document.querySelector('#toast').component.display("Hey there.");
     }

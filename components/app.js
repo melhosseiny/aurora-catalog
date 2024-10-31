@@ -1,4 +1,4 @@
-import { installRouter } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/router.js";
+import { installRouter } from "router";
 
 const toTitleCase = function(s) {
   return s.replace(/-/g, ' ')[0].toUpperCase() +
@@ -11,17 +11,11 @@ const handleNavigation = function(location) {
   loadPage(page);
 };
 
-const index_tmpl = `<article>
-  <h1 class='tagline'>
-    Aurora design is a web component design system.
-  </h1>
-</article>`
-
 const loadPage = async function(page) {
   switch(page) {
     case "index":
       document.title = "Aurora Design";
-      document.querySelector("#main").innerHTML = index_tmpl;
+      document.querySelector("#main").innerHTML = `<ac-catalog></ac-catalog>`;
       break;
     default:
       const doc = await import("/components/doc.js");

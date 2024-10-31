@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
     <style>html,body,section,nav,article,aside,h1,h2,h3,h4,h5,h6,hgroup,header,footer,address,p,hr,pre,blockquote,ol,ul,li,dl,dt,dd,figure,figcaption,div,table,caption,form,fieldset{vertical-align:baseline;margin:0;padding:0}body{font-family:var(--type-body);font-feature-settings:"liga" 1,"onum" 1,"kern" 1;background-color:rgb(var(--background-color));color:rgb(var(--text-color))}@supports (font-variant-ligatures: common-ligatures) and (font-variant-numeric: oldstyle-nums) and (font-kerning: normal){body{font-feature-settings:normal;font-variant-ligatures:common-ligatures;font-variant-numeric:oldstyle-nums;font-kerning:normal}}h1,h2,h3,h4,h5,h6{font-family:var(--type-display);font-feature-settings:"onum" 0}@supports (font-variant-numeric: lining-nums){h1,h2,h3,h4,h5,h6{font-feature-settings:normal;font-variant-numeric:lining-nums}}h3,abbr{hyphens:manual;text-transform:lowercase;font-feature-settings:"smcp" 1,"c2sc" 1}@supports (font-variant-caps: all-small-caps){h3,abbr{font-feature-settings:normal;font-variant-caps:all-small-caps}}.caps{letter-spacing:.05em}sub{font-feature-settings:"subs" 1}@supports (font-variant-position: sub){sub{font-feature-settings:normal;font-variant-position:sub}}@supports ((font-variant-position: sub) or (font-feature-settings: "subs" 1)){sub{vertical-align:inherit;font-size:inherit}}sup{font-feature-settings:"sups" 1}@supports (font-variant-position: super){sup{font-feature-settings:normal;font-variant-position:super}}@supports ((font-variant-position: super) or (font-feature-settings: "sups" 1)){sup{vertical-align:inherit;font-size:inherit}}p,blockquote{max-width:38em}p{margin-top:0;color:rgb(var(--text-color));hyphens:auto;hyphenate-limit-lines:2;hyphenate-limit-chars:6 3 2;hyphenate-limit-zone:8%;hyphenate-limit-last:always}blockquote{margin-left:1em}blockquote p{font-style:italic;margin-bottom:0}blockquote footer{text-align:right}.quoted p{quotes:"\201c" "\201d" "\2018" "\2019"}.quoted p:before{content:open-quote;margin-left:-.83ch}.quoted p:after{content:close-quote}hr{height:0;margin:0 0 1em;border-color:#0000001f;border-width:1px 0 0;box-sizing:content-box}ul,ol{margin-bottom:1em}p:has(+ul),p:has(+ol),ul:has(+p),ol:has(+p){margin-bottom:.5em}li ul,li ol{margin-bottom:0}ul{padding-left:1em}ol{padding-left:revert}a,a:link,a:visited,a:hover,a:active{color:rgb(var(--primary-color));text-decoration:none;transition:color .5s ease}a:visited{color:rgb(var(--accent-color))}a:hover,a:active{text-decoration:underline;text-decoration-skip-ink:auto}
 </style>
-    <style>html{font-size:14px}:root{--line-height-h1: .6060606060606061em;--line-height-h2: .7692307692307693em;--line-height-h3: 1em;--line-height-body: 1.25em;--font-size-body: 1rem}h1{font-size:2.0625rem;line-height:1.2121212121212122}h2{font-size:1.625rem;line-height:.7692307692307693}h3{font-size:1.25rem;line-height:1}body,.type--body,p,h4,h5,h6,button,input[type=button]{font-size:1rem;line-height:1.25}p,blockquote{margin-bottom:1.25em}.type--body{font-family:var(--type-body);font-weight:400}@media (min-width: 60em){:root{--line-height-h1:.6190476190476191em;--line-height-h2: .7878787878787878em;--line-height-h3: 1em;--line-height-body: 1.3em;--font-size-body: 1.25rem}h1{font-size:2.625rem;line-height:1.2380952380952381}h2{font-size:2.0625rem;line-height:.7878787878787878}h3{font-size:1.625rem;line-height:1}body,.type--body,p,h4,h5,h6,button,input[type=button]{font-size:1.25rem;line-height:1.3}p,blockquote{margin-bottom:1.3em}.type--body{font-family:var(--type-body);font-weight:400}}@media (min-width: 120em){:root{--line-height-h1: .6190476190476191em;--line-height-h2: .7878787878787878em;--line-height-h3: 1em;--line-height-body: 1.3em;--font-size-body: 1.25rem}h1{font-size:2.625rem;line-height:1.2380952380952381}h2{font-size:2.0625rem;line-height:.7878787878787878}h3{font-size:1.625rem;line-height:1}body,.type--body,p,h4,h5,h6,button,input[type=button]{font-size:1.25rem;line-height:1.3}p,blockquote{margin-bottom:1.3em}.type--body{font-family:var(--type-body);font-weight:400}}
+    <style>html{font-size:12px}:root{--line-height-h1: .6060606060606061em;--line-height-h2: .7692307692307693em;--line-height-h3: 1em;--line-height-body: 1.25em;--font-size-body: 1rem}h1{font-size:2.0625rem;line-height:1.2121212121212122}h2{font-size:1.625rem;line-height:.7692307692307693}h3{font-size:1.25rem;line-height:1}body,.type--body,p,h4,h5,h6,button,input[type=button]{font-size:1rem;line-height:1.25}p,blockquote{margin-bottom:1.25em}.type--body{font-family:var(--type-body);font-weight:400}@media (min-width: 60em){:root{--line-height-h1:.6190476190476191em;--line-height-h2: .7878787878787878em;--line-height-h3: 1em;--line-height-body: 1.3em;--font-size-body: 1.25rem}h1{font-size:2.625rem;line-height:1.2380952380952381}h2{font-size:2.0625rem;line-height:.7878787878787878}h3{font-size:1.625rem;line-height:1}body,.type--body,p,h4,h5,h6,button,input[type=button]{font-size:1.25rem;line-height:1.3}p,blockquote{margin-bottom:1.3em}.type--body{font-family:var(--type-body);font-weight:400}}@media (min-width: 120em){:root{--line-height-h1: .6190476190476191em;--line-height-h2: .7878787878787878em;--line-height-h3: 1em;--line-height-body: 1.3em;--font-size-body: 1.25rem}h1{font-size:2.625rem;line-height:1.2380952380952381}h2{font-size:2.0625rem;line-height:.7878787878787878}h3{font-size:1.625rem;line-height:1}body,.type--body,p,h4,h5,h6,button,input[type=button]{font-size:1.25rem;line-height:1.3}p,blockquote{margin-bottom:1.3em}.type--body{font-family:var(--type-body);font-weight:400}}
 </style>
     <style>button,input[type=button],a.button{--button-color: var(--accent-color);--opacity-enabled: 1;--opacity-hover: .76;--opacity-active: .38;--opacity-disabled: .32;font-family:var(--type-body);background-color:rgba(var(--button-color),var(--opacity-enabled));border:1px solid transparent;border-radius:var(--border-radius);text-decoration:none;padding:0 8px;display:inline-flex;position:relative;align-items:baseline;justify-content:center;box-sizing:border-box;height:var(--line-height-body);user-select:none;-webkit-appearance:none;overflow:hidden;color:rgb(var(--text-color))}button:hover,input[type=button]:hover,a.button:hover{cursor:pointer;background-color:rgba(var(--button-color),var(--opacity-hover));transition:background-color .5s ease}button:active,input[type=button]:active,a.button:active{outline:none;background-color:rgba(var(--button-color),var(--opacity-active))}button[disabled],input[type=button][disabled],a.button:not(:link){outline:none;background-color:rgba(var(--button-color),var(--opacity-disabled));color:rgba(var(--text-color),.38)}button.text,input[type=button].text,a.button.text{--button-color: 0, 0, 0;--opacity-enabled: 0;--opacity-hover: .12;--opacity-disabled: 0}
 </style>
     <style>table{border-collapse:collapse;font-feature-settings:"lnum" 1,"tnum" 1}@supports (font-variant-numeric: tabular-nums){table{font-feature-settings:normal;font-variant-numeric:lining-nums tabular-nums}}caption{caption-side:bottom}td,th{padding:.125em .5em .25em;line-height:1;text-align:left}td.num,th.num{text-align:right}th.oblique{transform-origin:bottom left;position:absolute}@media (max-width: 60em){table,tbody,tfoot,tr,th,td{display:block;text-align:left}caption{display:block}thead,th:empty,td:empty{display:none;visibility:hidden}th.num,td.num{text-align:left}th[data-title]:before,td[data-title]:before{content:attr(data-title) ": ";display:inline-block}tr+tr,tbody+tbody,tfoot{margin-top:1em}}
 </style>
-    <style>@font-face{font-family:"Premiera";src:url(https://early-fox-61.deno.dev/premiera-book.woff2) format("woff2");font-weight:normal;font-style:normal;font-display:fallback}@font-face{font-family:"SF Pro Display";src:url(https://early-fox-61.deno.dev/sf-pro-display_semibold.woff2) format("woff2");font-weight:bold;font-display:fallback}@font-face{font-family:"SF Pro Display";src:url(https://early-fox-61.deno.dev/sf-pro-display_regular.woff2) format("woff2");font-weight:normal;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_semibold.woff2) format("woff2");font-weight:bold;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_regular.woff2) format("woff2");font-weight:normal;font-display:fallback}@font-face{font-family:"SF Pro Text";src:url(https://early-fox-61.deno.dev/sf-pro-text_light.woff2) format("woff2");font-weight:200;font-display:fallback}@font-face{font-family:"SF Mono";src:url(https://early-fox-61.deno.dev/sf-mono_regular.woff) format("woff");font-weight:normal;font-display:fallback}:root{--type-display: "SF Pro Display", serif;--type-body: "SF Pro Text", sans-serif;--type-mono: "SF Mono", monospace;--background-color: 255, 255, 255;--text-color: 0, 0, 0;--primary-color: 12, 25, 64;--accent-color: 217, 136, 37;--soul-g: 0, 208, 193;--soul-b: 4, 118, 217;--soul: linear-gradient( 120deg, rgba(var(--soul-g), .25) 61.8%, rgba(var(--soul-b), .25) );--border-radius: 0}a:visited{color:rgb(var(--text-color))}h1,h2,h3,h4,h5,h6{font-family:var(--type-display);font-size:var(--font-size-body);margin-bottom:var(--line-height-body)}header h1 .base{font-weight:bold;font-variant-caps:all-small-caps;color:rgb(var(--background-color))}body:has(ac-doc) header h1 .base{color:rgb(var(--text-color))}header h1 a+a,header h1 a+a:link,header h1 a+a:visited{color:#0003;display:flex;align-items:center}header h1 a+a:hover,header h1 a+a:active{color:rgb(var(--accent-color));display:inline-flex;align-items:center}pre,code{font-family:var(--type-mono);font-size:14px}body{background:url(img/24987.jpg),#e0cdac;background-size:100%;background-attachment:fixed;background-repeat:no-repeat}body:has(ac-doc){background:var(--soul)}.tagline{font-size:xx-large;hyphens:auto}@media (min-width: 60em){.tagline{font-size:xxx-large}}.symbol{width:var(--font-size-body);max-height:var(--font-size-body);padding-top:2px}button .symbol,a.button .symbol{margin-right:4px}header h1 .symbol{margin-left:4px}.md-icon{font-family:"Material Icons";font-style:normal}
+    <style>@font-face{font-family:"Hoefler";src:url(fonts/HoeflerTxt-Roman-TD.woff) format("woff");font-weight:normal;font-style:normal;font-display:fallback}@font-face{font-family:"HoeflerSpace";src:url(fonts/HoeflerTxt-Roman-TD-Space.woff) format("woff");font-weight:normal;font-style:normal;font-display:fallback}@font-face{font-family:"Decimal";src:url(fonts/Decimal-Book-TD.woff) format("woff");font-weight:normal;font-display:fallback}@font-face{font-family:"DecimalSpace";src:url(fonts/Decimal-Book-TD-Space.woff) format("woff");font-weight:normal;font-display:fallback}@font-face{font-family:"Decimal";src:url(fonts/Decimal-Light-TD.woff) format("woff");font-weight:200;font-display:fallback}@font-face{font-family:"DecimalSpace";src:url(fonts/Decimal-Light-TD-Space.woff) format("woff");font-weight:200;font-display:fallback}@font-face{font-family:"Operator Mono";src:url(fonts/OperatorMonoSSm-Book_Web.woff2) format("woff2");font-weight:normal;font-display:fallback}:root{--type-display: "DecimalSpace", "Decimal", serif;--type-body: "DecimalSpace", "Decimal", sans-serif;--type-mono: "Operator Mono", monospace;--background-color: 255, 255, 255;--text-color: 0, 0, 0;--primary-color: 0, 0, 0;--accent-color: 0, 255, 255;--border-radius: 0}a:visited{color:rgb(var(--text-color))}h1,h2,h3,h4,h5,h6{font-family:var(--type-display);font-size:var(--font-size-body);margin-bottom:var(--line-height-body)}#header{background-color:rgb(var(--text-color));color:rgb(var(--background-color))}#header h2{font-size:48px;margin-top:var(--line-height-body);margin-bottom:2rem}#header h3{font-family:var(--type-body);font-size:24px;font-weight:normal;font-variant-caps:normal;text-transform:none;color:#fffc}pre,code{font-family:var(--type-mono)}#backgroundCanvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.symbol{width:var(--font-size-body);max-height:var(--font-size-body);padding-top:2px}button .symbol,a.button .symbol{margin-right:4px}header h1 .symbol{margin-left:4px}
 </style>
-    <style>body{display:flex;flex-direction:column;align-items:stretch;min-height:100vh;flex-wrap:wrap}#header{display:flex;flex-direction:column;flex:0 0 auto;padding:1em;box-sizing:border-box}#header hgroup h1{display:flex;flex-direction:row;align-items:center;margin-bottom:var(--line-height-body)}#header p{max-width:24em}#header nav{display:flex;flex-direction:column;align-items:flex-start}main{display:flex;flex-direction:column;flex-grow:1;flex-basis:auto;padding:1em;padding-top:calc(1em + 2 * var(--line-height-body));box-sizing:border-box}main section{padding:1em}@media screen and (min-width: 60em){body{flex-direction:row}#header{flex-basis:38.2%}main{width:100%;min-height:calc(100vh - 40px - 2em);flex-basis:61.8%}}@media screen and (max-width: 60em){main{width:100%;padding-top:1em}}
+    <style>body{display:flex;flex-direction:column;align-items:stretch;min-height:100dvh;flex-wrap:wrap}#header{display:flex;flex-direction:column;flex:0 0 auto;padding:1em;box-sizing:border-box}#header ad-menubar{margin:-1em}main{display:flex;flex-direction:column;flex-grow:1;flex-basis:auto;height:100%;padding:2em 1em 1em;box-sizing:border-box}
 </style>
     <style>
-      .grid {
-        /*border: 1px solid purple;*/
+      .cgrid {
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
         max-width: 38em;
       }
 
-      .grid > * {
-        /*border: 1px solid cyan;*/
+      .cgrid > * {
         box-sizing: border-box;
         margin-right: 8px;
         margin-bottom: 8px;
         width: calc(50% - 4px);
       }
 
-      .grid > :nth-child(2n) {
-        /*border: 1px solid red;*/
+      .cgrid > :nth-child(2n) {
         margin-right: 0;
       }
 
@@ -44,48 +41,37 @@
         display: block;
       }
     </style>
-    <style>@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v141/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf) format("truetype")}.material-icons{font-family:"Material Icons";font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr}
-</style>
+    <script type="importmap">
+      {
+        "imports": {
+          "sourdough": "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js",
+          "router": "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/router.js"
+        }
+      }
+    </script>
     <script type="module">
-      import { set_shared_style_sheets } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+      import { set_shared_style_sheets } from "sourdough";
       const document_style_sheets = [...document.styleSheets].slice(0,7);
       console.log(document_style_sheets);
       set_shared_style_sheets(document_style_sheets);
     </script>
   </head>
   <body>
+    <canvas id="backgroundCanvas"></canvas>
+
     <ad-progress id="progress"></ad-progress>
     <header id="header">
+      <ad-menubar></ad-menubar>
       <hgroup>
-        <h1 class="type--body">
-          <span class="logo"></span>
-          <a class="base" href="/">aurora design</a>
-          <a href="https://github.com/melhosseiny/aurora" target="_blank" rel="noreferrer">
-            <svg class="symbol" fill="currentColor" aria-hidden="true" viewbox="0 0 16 16" version="1.1" data-view-component="true">
-                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-            </svg>
-          </a>
-        </h1>
+        <h2>Web component design system</h2>
+        <h3>Build magical web experiences using <abbr>HTML</abbr></h3>
       </hgroup>
-      <details>
-        <summary>components</summary>
-        <nav>
-          <a href="/button"><code>ad-button</code></a>
-          <a href="/toast"><code>ad-toast</code></a>
-          <a href="/dialog"><code>ad-dialog</code></a>
-          <a href="/card"><code>ad-card</code></a>
-          <a href="/carousel"><code>ad-carousel</code></a>
-          <a href="/media_grid"><code>ad-media-grid</code></a>
-          <a href="/typography"><code>typography</code></a>
-          <a href="/rhythm"><code>typography:rhythm</code></a>
-        </nav>
-      </details>
     </header>
     <main id="main"></main>
     <ad-dialog id="global_dialog"></ad-dialog>
     <ad-toast id="global_toast"></ad-toast>
     <script type="module">
-      import { get_constructed_style_sheet } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+      import { get_constructed_style_sheet } from "sourdough";
 
       const document_style_sheets = [...document.styleSheets].slice(0,7);
       console.log(document_style_sheets);
@@ -96,7 +82,9 @@
       } catch (error) {}
 
       import "/components/app.js";
+      import { catalog } from "/components/catalog.js";
       import { doc } from "/components/doc.js";
+      import { menubar } from "/components/menubar.js";
 
       import { progress } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/progress/progress.js";
       import { toast } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/toast/toast.js";
@@ -114,11 +102,103 @@
       }
 
       try {
-        const selector = "ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog, ad-media-grid";
+        const selector = "ac-catalog, ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog, ad-media-grid, ad-menubar";
         document.querySelectorAll(selector).forEach(element => {
           element.component.adopt_styles(document_constructed_sheets);
         });
       } catch (error) {}
+    </script>
+    <script type="module">
+      function debounce(func, wait) {
+          let timeout;
+          return function(...args) {
+              const context = this;
+              clearTimeout(timeout);
+              timeout = setTimeout(() => func.apply(context, args), wait);
+          };
+      }
+      
+      const canvas = document.getElementById('backgroundCanvas');
+      const ctx = canvas.getContext('2d');
+
+      function resizeCanvas() {// Get the device pixel ratio
+          const dpr = window.devicePixelRatio || 1;
+
+          // Set the canvas size
+          canvas.width = window.innerWidth * dpr; // Multiply by device pixel ratio
+          canvas.height = window.innerHeight * dpr;
+
+          // Scale the context
+          drawPattern(ctx);
+          drawPattern(ctx, true);
+          ctx.scale(dpr, dpr);
+      }
+      
+      // Create a ResizeObserver to monitor changes to the canvas size
+      const resizeObserver = new ResizeObserver(debounce(() => {
+          resizeCanvas();
+      }, 300));
+
+      // Start observing the canvas element
+      resizeObserver.observe(canvas);
+
+      // Initial draw
+      resizeCanvas();
+
+      function drawPattern(context, flip = false) {
+        const canvasWidth = context.canvas.width;
+        const canvasHeight = context.canvas.height;
+
+        // Define the base coordinates for a 900x1200 canvas
+        const baseCoordinates = [
+          [[226, 1200], [451, 846], [677, 1200]],
+          [[124, 1200], [451, 810], [779, 1200]],
+          [[0, 1200], [451, 779], [900, 1200]],
+          [[0, 1088], [451, 754], [900, 1088]],
+          [[0, 1009], [451, 734], [900, 1009]],
+          [[0, 950], [451, 718], [900, 950]],
+          [[0, 905], [451, 705], [900, 905]],
+          [[0, 870], [451, 694], [900, 870]],
+          [[0, 842], [451, 686], [900, 842]],
+          [[0, 820], [451, 678], [900, 820]],
+          [[0, 802], [451, 672], [900, 802]],
+          [[0, 787], [451, 667], [900, 787]],
+          [[0, 774], [451, 663], [900, 774]],
+          [[0, 763], [451, 659], [900, 763]],
+          [[0, 754], [451, 655], [900, 754]],
+          [[0, 745], [451, 652], [900, 745]],
+          [[0, 738], [451, 649], [900, 738]],
+          [[0, 731], [451, 646], [900, 731]],
+          [[0, 724], [451, 643], [900, 724]],
+          [[0, 718], [451, 640], [900, 718]],
+          [[0, 711], [451, 637], [900, 711]]
+        ];
+
+        // Calculate scaling factors for width and height
+        const scaleX = canvasWidth / 900;
+        const scaleY = canvasHeight / 1200;
+
+        // Set line style
+        ctx.strokeStyle = 'rgba(0, 255, 255, 1)'
+        context.lineWidth = 1;
+
+        // Draw each triangle, flipping vertically if 'flip' is true
+        baseCoordinates.forEach(triangle => {
+          context.beginPath();
+
+          const [first, second, third] = triangle;
+
+          // Scale points and optionally flip their y-coordinates
+          const [x1, y1] = [first[0] * scaleX, flip ? canvasHeight - first[1] * scaleY : first[1] * scaleY];
+          const [x2, y2] = [second[0] * scaleX, flip ? canvasHeight - second[1] * scaleY : second[1] * scaleY];
+          const [x3, y3] = [third[0] * scaleX, flip ? canvasHeight - third[1] * scaleY : third[1] * scaleY];
+
+          context.moveTo(x1, y1);
+          context.lineTo(x2, y2); // First side
+          context.lineTo(x3, y3); // Second side
+          context.stroke();
+        });
+      }
     </script>
   
 

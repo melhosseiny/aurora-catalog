@@ -1,4 +1,4 @@
-import { html, state, web_component, define_component } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+import { html, state, web_component, define_component } from "sourdough";
 
 const template = (data) => html`
   <article ref="markup lang" class="${data.id}">
@@ -7,16 +7,20 @@ const template = (data) => html`
 `
 
 const style = `
+  :host {
+    overflow: scroll;
+    border: 1px solid black;
+  }
+
   article {
     max-width: 38em;
     padding: 1em;
-    background-color: #fff;
-    border-radius: 7px;
   }
 
   pre {
     margin-bottom: var(--line-height-body);
-    background-color: #eee;
+    background-color: black;
+    color: white;
     padding: 0.5em;
     overflow: auto;
   }
@@ -29,7 +33,7 @@ const style = `
 export function doc(spec) {
   let { _root } = spec;
   const _web_component = web_component(spec);
-  const _state = _web_component.state;
+  const _state = state(spec);
 
   const fetch_doc = async () => {
     try {

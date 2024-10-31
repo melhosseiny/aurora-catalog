@@ -1,6 +1,6 @@
 # Card
 
-<div class="grid">
+<div class="cgrid">
   <ad-card title-label="Aurora" subtitle-label="Borealis">
     <picture slot="media">
       <source srcset="https://upload.wikimedia.org/wikipedia/commons/c/cf/Northern_Lights_02.jpg" type="image/webp">

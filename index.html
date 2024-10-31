@@ -11,24 +11,21 @@
     <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="/css/layout.css">
     <style>
-      .grid {
-        /*border: 1px solid purple;*/
+      .cgrid {
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
         max-width: 38em;
       }
 
-      .grid > * {
-        /*border: 1px solid cyan;*/
+      .cgrid > * {
         box-sizing: border-box;
         margin-right: 8px;
         margin-bottom: 8px;
         width: calc(50% - 4px);
       }
 
-      .grid > :nth-child(2n) {
-        /*border: 1px solid red;*/
+      .cgrid > :nth-child(2n) {
         margin-right: 0;
       }
 
@@ -39,47 +36,37 @@
         display: block;
       }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <script type="importmap">
+      {
+        "imports": {
+          "sourdough": "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js",
+          "router": "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/router.js"
+        }
+      }
+    </script>
     <script type="module">
-      import { set_shared_style_sheets } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+      import { set_shared_style_sheets } from "sourdough";
       const document_style_sheets = [...document.styleSheets].slice(0,7);
       console.log(document_style_sheets);
       set_shared_style_sheets(document_style_sheets);
     </script>
   </head>
   <body>
+    <canvas id="backgroundCanvas"></canvas>
+
     <ad-progress id="progress"></ad-progress>
     <header id="header">
+      <ad-menubar></ad-menubar>
       <hgroup>
-        <h1 class="type--body">
-          <span class="logo"></span>
-          <a class="base" href="/">aurora design</a>
-          <a href="https://github.com/melhosseiny/aurora" target="_blank" rel="noreferrer">
-            <svg class="symbol" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
-                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-            </svg>
-          </a>
-        </h1>
+        <h2>Web component design system</h2>
+        <h3>Build magical web experiences using <abbr>HTML</abbr></h3>
       </hgroup>
-      <details>
-        <summary>components</summary>
-        <nav>
-          <a href="/button"><code>ad-button</code></a>
-          <a href="/toast"><code>ad-toast</code></a>
-          <a href="/dialog"><code>ad-dialog</code></a>
-          <a href="/card"><code>ad-card</code></a>
-          <a href="/carousel"><code>ad-carousel</code></a>
-          <a href="/media_grid"><code>ad-media-grid</code></a>
-          <a href="/typography"><code>typography</code></a>
-          <a href="/rhythm"><code>typography:rhythm</code></a>
-        </nav>
-      </details>
     </header>
     <main id="main"></main>
     <ad-dialog id="global_dialog"></ad-dialog>
     <ad-toast id="global_toast"></ad-toast>
     <script type="module">
-      import { get_constructed_style_sheet } from "https://busy-dog-44.deno.dev/melhosseiny/sourdough/main/sourdough.js";
+      import { get_constructed_style_sheet } from "sourdough";
 
       const document_style_sheets = [...document.styleSheets].slice(0,7);
       console.log(document_style_sheets);
@@ -90,7 +77,9 @@
       } catch (error) {}
 
       import "/components/app.js";
+      import { catalog } from "/components/catalog.js";
       import { doc } from "/components/doc.js";
+      import { menubar } from "/components/menubar.js";
 
       import { progress } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/progress/progress.js";
       import { toast } from "https://busy-dog-44.deno.dev/melhosseiny/aurora/main/src/toast/toast.js";
@@ -108,11 +97,103 @@
       }
 
       try {
-        const selector = "ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog, ad-media-grid";
+        const selector = "ac-catalog, ac-doc, ad-progress, ad-toast, ad-card, ad-carousel, ad-dialog, ad-media-grid, ad-menubar";
         document.querySelectorAll(selector).forEach(element => {
           element.component.adopt_styles(document_constructed_sheets);
         });
       } catch (error) {}
+    </script>
+    <script type="module">
+      function debounce(func, wait) {
+          let timeout;
+          return function(...args) {
+              const context = this;
+              clearTimeout(timeout);
+              timeout = setTimeout(() => func.apply(context, args), wait);
+          };
+      }
+      
+      const canvas = document.getElementById('backgroundCanvas');
+      const ctx = canvas.getContext('2d');
+
+      function resizeCanvas() {// Get the device pixel ratio
+          const dpr = window.devicePixelRatio || 1;
+
+          // Set the canvas size
+          canvas.width = window.innerWidth * dpr; // Multiply by device pixel ratio
+          canvas.height = window.innerHeight * dpr;
+
+          // Scale the context
+          drawPattern(ctx);
+          drawPattern(ctx, true);
+          ctx.scale(dpr, dpr);
+      }
+      
+      // Create a ResizeObserver to monitor changes to the canvas size
+      const resizeObserver = new ResizeObserver(debounce(() => {
+          resizeCanvas();
+      }, 300));
+
+      // Start observing the canvas element
+      resizeObserver.observe(canvas);
+
+      // Initial draw
+      resizeCanvas();
+
+      function drawPattern(context, flip = false) {
+        const canvasWidth = context.canvas.width;
+        const canvasHeight = context.canvas.height;
+
+        // Define the base coordinates for a 900x1200 canvas
+        const baseCoordinates = [
+          [[226, 1200], [451, 846], [677, 1200]],
+          [[124, 1200], [451, 810], [779, 1200]],
+          [[0, 1200], [451, 779], [900, 1200]],
+          [[0, 1088], [451, 754], [900, 1088]],
+          [[0, 1009], [451, 734], [900, 1009]],
+          [[0, 950], [451, 718], [900, 950]],
+          [[0, 905], [451, 705], [900, 905]],
+          [[0, 870], [451, 694], [900, 870]],
+          [[0, 842], [451, 686], [900, 842]],
+          [[0, 820], [451, 678], [900, 820]],
+          [[0, 802], [451, 672], [900, 802]],
+          [[0, 787], [451, 667], [900, 787]],
+          [[0, 774], [451, 663], [900, 774]],
+          [[0, 763], [451, 659], [900, 763]],
+          [[0, 754], [451, 655], [900, 754]],
+          [[0, 745], [451, 652], [900, 745]],
+          [[0, 738], [451, 649], [900, 738]],
+          [[0, 731], [451, 646], [900, 731]],
+          [[0, 724], [451, 643], [900, 724]],
+          [[0, 718], [451, 640], [900, 718]],
+          [[0, 711], [451, 637], [900, 711]]
+        ];
+
+        // Calculate scaling factors for width and height
+        const scaleX = canvasWidth / 900;
+        const scaleY = canvasHeight / 1200;
+
+        // Set line style
+        ctx.strokeStyle = 'rgba(0, 255, 255, 1)'
+        context.lineWidth = 1;
+
+        // Draw each triangle, flipping vertically if 'flip' is true
+        baseCoordinates.forEach(triangle => {
+          context.beginPath();
+
+          const [first, second, third] = triangle;
+
+          // Scale points and optionally flip their y-coordinates
+          const [x1, y1] = [first[0] * scaleX, flip ? canvasHeight - first[1] * scaleY : first[1] * scaleY];
+          const [x2, y2] = [second[0] * scaleX, flip ? canvasHeight - second[1] * scaleY : second[1] * scaleY];
+          const [x3, y3] = [third[0] * scaleX, flip ? canvasHeight - third[1] * scaleY : third[1] * scaleY];
+
+          context.moveTo(x1, y1);
+          context.lineTo(x2, y2); // First side
+          context.lineTo(x3, y3); // Second side
+          context.stroke();
+        });
+      }
     </script>
   </body>
 </html>

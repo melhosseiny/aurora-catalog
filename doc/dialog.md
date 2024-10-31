@@ -1,6 +1,6 @@
 # Dialog
 
-A dialog helps people perform a scoped task that's closely related to their current context.
+Use a dialog to helps users do a task that's closely related to what they are doing.
 
 ## How to use
 
@@ -38,5 +38,5 @@ A dialog helps people perform a scoped task that's closely related to their curr
     <button onclick="showDialog()">Show dialog</button>
 
     window.showDialog = () => {
-      console.log(document.querySelector('#global_dialog').component.show());
+      console.log(document.querySelector('#dialog').component.show());
     }

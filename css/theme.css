@@ -1,70 +1,63 @@
 @font-face {
-  font-family: 'Premiera';
-  src:  url('https://early-fox-61.deno.dev/premiera-book.woff2') format('woff2');
+  font-family: "Hoefler";
+  src:  url('fonts/HoeflerTxt-Roman-TD.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: "SF Pro Display";
-  src: url('https://early-fox-61.deno.dev/sf-pro-display_semibold.woff2') format('woff2');
-  font-weight: bold;
+  font-family: "HoeflerSpace";
+  src:  url('fonts/HoeflerTxt-Roman-TD-Space.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: "SF Pro Display";
-  src: url('https://early-fox-61.deno.dev/sf-pro-display_regular.woff2') format('woff2');
+  font-family: "Decimal";
+  src: url('fonts/Decimal-Book-TD.woff') format('woff');
   font-weight: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: "SF Pro Text";
-  src: url('https://early-fox-61.deno.dev/sf-pro-text_semibold.woff2') format('woff2');
-  font-weight: bold;
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: "SF Pro Text";
-  src: url('https://early-fox-61.deno.dev/sf-pro-text_regular.woff2') format('woff2');
+  font-family: "DecimalSpace";
+  src: url('fonts/Decimal-Book-TD-Space.woff') format('woff');
   font-weight: normal;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: "SF Pro Text";
-  src: url('https://early-fox-61.deno.dev/sf-pro-text_light.woff2') format('woff2');
+  font-family: "Decimal";
+  src: url('fonts/Decimal-Light-TD.woff') format('woff');
   font-weight: 200;
   font-display: fallback;
 }
 
 @font-face {
-  font-family: "SF Mono";
-  src: url('https://early-fox-61.deno.dev/sf-mono_regular.woff') format('woff');
+  font-family: "DecimalSpace";
+  src: url('fonts/Decimal-Light-TD-Space.woff') format('woff');
+  font-weight: 200;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  src: url("fonts/OperatorMonoSSm-Book_Web.woff2") format('woff2');
   font-weight: normal;
   font-display: fallback;
 }
 
 :root {
-  --type-display: "SF Pro Display", serif;
-  --type-body: "SF Pro Text", sans-serif;
-  --type-mono: "SF Mono", monospace;
+  --type-display: "DecimalSpace", "Decimal", serif;
+  --type-body: "DecimalSpace", "Decimal", sans-serif;
+  --type-mono: "Operator Mono", monospace;
   --background-color: 255, 255, 255;
   --text-color: 0, 0, 0;
-  --primary-color: 12, 25, 64;
-  --accent-color: 217, 136, 37;
-  --soul-g: 0, 208, 193;
-  --soul-b: 4, 118, 217;
-  --soul:
-    linear-gradient(
-      120deg,
-      rgba(var(--soul-g), 0.25) 61.8%,
-      rgba(var(--soul-b), 0.25)
-    );
-    --border-radius: 0;
+  --primary-color: 0, 0, 0;
+  --accent-color: 0, 255, 255;
+  --border-radius: 0;
 }
 
 a:visited {
@@ -77,53 +70,37 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--line-height-body);
 }
 
-header h1 .base {
-  font-weight: bold;
-  font-variant-caps: all-small-caps;
+#header {
+  background-color: rgb(var(--text-color));
   color: rgb(var(--background-color));
 }
 
-body:has(ac-doc) header h1 .base {
-  color: rgb(var(--text-color));
+#header h2 {
+  font-size: 48px;
+  margin-top: var(--line-height-body);
+  margin-bottom: 2rem;
 }
 
-header h1 a + a, header h1 a + a:link, header h1 a + a:visited {
-  color: rgba(0,0,0,.2);
-  display: flex;
-  align-items: center;
-}
-
-header h1 a + a:hover, header h1 a + a:active {
-  color: rgb(var(--accent-color));
-  display: inline-flex;
-  align-items: center;
+#header h3 {
+  font-family: var(--type-body);
+  font-size: 24px;
+  font-weight: normal;
+  font-variant-caps: normal;
+  text-transform: none;
+  color: rgba(255,255,255,0.8);
 }
 
 pre, code {
   font-family: var(--type-mono);
-  font-size: 14px;
 }
 
-body {
-  background: url(img/24987.jpg), #e0cdac;
-  background-size: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-body:has(ac-doc) {
-  background: var(--soul);
-}
-
-.tagline {
-  font-size: xx-large;
-  hyphens: auto;
-}
-
-@media (min-width: 60em) {
-  .tagline {
-    font-size: xxx-large;
-  }
+#backgroundCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 /* icons */
@@ -139,9 +116,4 @@ button .symbol, a.button .symbol {
 
 header h1 .symbol {
   margin-left: 4px;
-}
-
-.md-icon {
-  font-family: 'Material Icons';
-  font-style: normal;
 }
